@@ -1,0 +1,30 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[top=1cm, bottom=2.5cm, left=1cm, right=1cm]{geometry} % set margins
+\usepackage{setspace} % \onehalfspacing or \doublespacing or \setstretch{1.25}
+\setstretch{1.4}
+\usepackage[utf8]{inputenc}
+\usepackage[hyphens]{url} 
+\usepackage[colorlinks, breaklinks]{hyperref}
+\hypersetup{citecolor={blue}, linkcolor={green}, urlcolor={black}, filecolor={cyan}}
+\hypersetup{pdfpagemode=UseNone} % hide bookmarks when we open the pdf
+\usepackage[parfill]{parskip} 
+\pagenumbering{gobble} % delete page numbers for all pages
+\usepackage{pgffor} % use \foreach command
+
+\newcommand{\webomints}[1]{{\usefont{U}{webo}{xl}{n} #1}}
+\newcommand{\repeatn}[2]{\foreach \n in {1,...,#2}{#1}}
+
+\begin{document}
+\begin{center}
+\large \webomints{A} $\repeatn{\cdots}{11}$ \webomints{pq} $\repeatn{\cdots}{11}$ \webomints{B}
+\end{center}
+\vspace*{-0.4cm}
+\hspace*{1.4cm}\textbf{Topic/Course:} \hspace*{8cm}\textbf{Date:} \\[0.15cm]
+\hspace*{1.4cm}\textbf{Subtopic:} \hspace*{8.9cm} \\[0.15cm]
+\hspace*{1.4cm}\href{https://github.com/zekiakyol/handwritten-note-templete}{\textbf{References:}}
+\vspace*{-0.4cm}
+\begin{center}
+\large \webomints{C} $\repeatn{\cdots}{11}$ \webomints{ij} $\repeatn{\cdots}{11}$ \webomints{D}
+\end{center}
+
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[top=1cm, bottom=0cm, left=0cm, right=0cm]{geometry} % set margins
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref} 
+\hypersetup{pdfpagemode=UseNone} % hide bookmarks when we open the pdf
+\setlength\parindent{0pt} 
+\pagenumbering{gobble} % delete page number
+\usepackage{pgffor} % use \foreach command
+
+\newcommand{\repeatn}[2]{\foreach \n in {1,...,#2}{#1}}
+
+\begin{document}
+
+\repeatn{\rule{\textwidth}{1pt} \newline}{52}
+
+\end{document}
